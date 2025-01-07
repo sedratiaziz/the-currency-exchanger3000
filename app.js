@@ -4,7 +4,7 @@ const baseSelectEl = document.querySelector("#baseSelect")
 const targetSelectEl = document.querySelector("#targetSelect")
 const convertBtn = document.querySelector("#convert-btn")
 const amountInput = document.querySelector("input")
-
+const resultH1 = document.querySelector("#resultH1")
 
 baseSelectEl.innerHTML = "<option>Loading...</option>"
 targetSelectEl.innerHTML = "<option>Loading...</option>"
@@ -51,7 +51,7 @@ async function convert(baseValue, targetValue, amount) {
         const base_code = conversion_rate_obj.data.base_code;
         const target_code = conversion_rate_obj.data.target_code;
 
-        alert(`${amount} ${base_code} is equal to ${result} ${target_code}`)
+        resultH1.textContent = `${amount} ${base_code} is equal to ${result} ${target_code}`;
 
     } catch (error) {
         console.log(error)

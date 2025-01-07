@@ -58,11 +58,6 @@
         box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
         }
 
-        /* .button-29:hover {
-        box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-        transform: translateY(-2px);
-        } */
-
         .button-29:active {
         box-shadow: #3c4fe0 0 3px 7px inset;
         transform: translateY(2px);
@@ -74,11 +69,13 @@
 <body>
     <section>
         <div class="container h-100 flex-column d-flex align-items-center justify-content-center">
-            
+            <div class="d-flex d-flex h-25 w-100 justify-content-center align-items-center">
+                <h1 id="resultH1">Choose any currency you want</h1>
+            </div>
             <div class="d-flex d-flex h-25 w-100 justify-content-center align-items-center">
                 <div class="d-flex h-100 w-50 justify-content-center align-items-center">
                     <div class="">From</div>
-                    <input type="number" class="mx-4"></input>
+                    <input required type="number" class="mx-4"></input>
                     <select id="baseSelect" name="categories">
                     
                     </select>
@@ -93,7 +90,7 @@
 
             <div class="d-flex d-flex h-25 w-100 justify-content-center align-items-center">
                 <div>
-                    <button class="button-29" id="convert-btn">CONVERT</button>
+                    <button type="submit" class="button-29" id="convert-btn">CONVERT</button>
                 </div>
             </div>    
         </div>
