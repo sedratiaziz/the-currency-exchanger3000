@@ -1,5 +1,3 @@
-
-
 const baseSelectEl = document.querySelector("#baseSelect")
 const targetSelectEl = document.querySelector("#targetSelect")
 const convertBtn = document.querySelector("#convert-btn")
@@ -58,6 +56,15 @@ async function convert(baseValue, targetValue, amount) {
     }
 }
 
+amountInput.addEventListener("keydown", async(event)=>{
+    if (event.key === 'Enter') {
+        const baseValue = baseSelectEl.value;
+        const targetValue = targetSelectEl.value;
+        const amount = amountInput.value;
+    
+        await convert(baseValue, targetValue, amount);
+    }
+})
 
 convertBtn.addEventListener("click", async () => {
     const baseValue = baseSelectEl.value;
